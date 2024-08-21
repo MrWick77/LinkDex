@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinkedIn Profile to PDF</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <!-- Video Background -->
+    <video class="video-background" autoplay muted loop>
+        <source src="{{ url_for('static', filename='background.mp4') }}" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Content Area -->
+    <div class="content">
+        <div class="container">
+            <form method="POST">
+                <label for="profile_url">LinkedIn Profile URL:</label>
+                <input type="text" id="profile_url" name="profile_url" required>
+                <button type="submit" class="btn">Get Your Resume</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
